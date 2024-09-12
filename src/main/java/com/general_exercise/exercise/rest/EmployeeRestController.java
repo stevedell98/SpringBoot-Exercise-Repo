@@ -1,11 +1,10 @@
-package rest;
+package com.general_exercise.exercise.rest;
 
 
-import entity.Car;
-import jakarta.persistence.EntityManager;
+import com.general_exercise.exercise.entity.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.Car_service;
+import com.general_exercise.exercise.service.Car_service;
 
 import java.util.List;
 
@@ -55,13 +54,13 @@ public class EmployeeRestController {
 //
 //    }
 
-//    @PutMapping("/employees")
-//
-//    public Car updateEmployee(@RequestBody Car updatedEmployee){
-//
-//
-//        return carService.updateCars(updatedEmployee);
-//    }
+    @PutMapping("/cars")
+
+    public Car updateEmployee(@RequestBody Car updatedCar){
+
+        Car dbCar = carService.save(updatedCar);
+        return dbCar;
+    }
 
 //    @DeleteMapping("/employees/{theId}")
 //

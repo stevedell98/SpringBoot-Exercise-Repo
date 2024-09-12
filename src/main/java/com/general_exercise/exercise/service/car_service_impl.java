@@ -1,9 +1,9 @@
-package service;
+package com.general_exercise.exercise.service;
 
-import entity.Car;
+import com.general_exercise.exercise.entity.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.car_dealership_repo;
+import com.general_exercise.exercise.DAO.car_dealership_repo;
 
 import java.util.List;
 
@@ -19,6 +19,7 @@ public class car_service_impl implements Car_service{
     }
 
     @Override
+
      public List<Car> findAll() {
 
         return  car.findAll();
@@ -32,10 +33,10 @@ public class car_service_impl implements Car_service{
 //
 //    }
 
-//@Override
-//    public Car updateCars(Car carBrand){
-//        return car.save(carBrand);
-//    }
+    @Override
+    public Car save(Car carBrand){
+        return car.save(carBrand);
+   }
 
 //    public void deleteCar(String Id){
 //        carService.deleteCar(Id);

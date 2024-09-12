@@ -1,4 +1,4 @@
-package entity;
+package com.general_exercise.exercise.entity;
 
 
 import jakarta.persistence.Column;
