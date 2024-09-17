@@ -1,13 +1,12 @@
 package com.general_exercise.exercise.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.UUID;
 
 @Entity
-@Table(name="car")
+@Table(name="car_dealership")
 public class Car {
 
     @Id
@@ -20,11 +19,20 @@ public class Car {
     @Column(name = "year")
     private String year;
 
+    @PrePersist
+    public void prePersist() {
+        // Generate a UUID if the id is not set before persisting the entity
+        if (this.brandName == null) {
+            this.brandName = UUID.randomUUID().toString();
+        }
+    }
+
     public Car(){
 
     }
 
-    public Car(String modelName, String year) {
+    public Car(String brandName,String modelName, String year) {
+       this.brandName = brandName;
         this.modelName = modelName;
         this.year = year;
     }
