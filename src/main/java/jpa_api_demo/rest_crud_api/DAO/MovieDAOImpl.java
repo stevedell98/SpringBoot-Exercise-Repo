@@ -18,7 +18,7 @@ public class MovieDAOImpl implements MovieDAO{
     private EntityManager entityManager;
 
     @Autowired
-    public MovieDAOImpl(){
+    public MovieDAOImpl(EntityManager entityManager){
 
         this.entityManager = entityManager;
     }
