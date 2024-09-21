@@ -27,13 +27,12 @@ public class MovieRestController {
         return movieDAO.findAll();
     }
 
-    @GetMapping("/movies/{Id}"){
+//    @GetMapping("/movies/{Id}"){
+//
+//        public Movie findById();
+//
+//        }
 
-        public Movie findById();
-
-
-        }
-    }
 
 
 
