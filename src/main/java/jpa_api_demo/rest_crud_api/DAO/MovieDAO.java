@@ -10,8 +10,8 @@ public interface MovieDAO {
 
     public Movie findById(int Id);
 
-//    public Movie newMovie(Movie movie);
+   public void newMovie(Movie movie);
 //
-//    public void deleteMovie(int id);
+   public void deleteMovie(int id);
 
 }
