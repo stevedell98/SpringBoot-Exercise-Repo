@@ -1,0 +1,9 @@
+package com.general_exercise.exercise.ExceptionHandling;
+
+public class CarNotFoundException extends RuntimeException {
+
+    public CarNotFoundException(String message){
+
+        super(message);
+    }
+}

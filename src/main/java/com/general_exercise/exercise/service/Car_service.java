@@ -3,19 +3,16 @@ package com.general_exercise.exercise.service;
 import com.general_exercise.exercise.entity.Car;
 
 import java.util.List;
-import java.util.Optional;
 
 
 public interface Car_service {
 
-     List<Car> findAll();
+    public List<Car> findAll();
 
-    Car findById(String Id);
+    //public Car getCarbyId(String Id);
 
-    Car createNewCar(Car theCar);
+    //public Car updateCars(Car carBrand);
 
-     Car save(Car updatedCar);
-
-    public void deleteCar(String Id);
+    //public void deleteCar(String Id);
 }
 

@@ -3,10 +3,8 @@ package com.general_exercise.exercise.entity;
 
 import jakarta.persistence.*;
 
-import java.util.UUID;
-
 @Entity
-@Table(name="car_dealership")
+@Table(name="car")
 public class Car {
 
     @Id
@@ -19,20 +17,11 @@ public class Car {
     @Column(name = "year")
     private String year;
 
-    @PrePersist
-    public void prePersist() {
-        // Generate a UUID if the id is not set before persisting the entity
-        if (this.brandName == null) {
-            this.brandName = UUID.randomUUID().toString();
-        }
-    }
-
     public Car(){
 
     }
 
-    public Car(String brandName,String modelName, String year) {
-       this.brandName = brandName;
+    public Car(String modelName, String year) {
         this.modelName = modelName;
         this.year = year;
     }
@@ -63,7 +52,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Car{" +
                 ", brand '" + brandName + '\'' +
                 ", model'" + modelName + '\'' +
                 ", year'" + year + '\'' +
