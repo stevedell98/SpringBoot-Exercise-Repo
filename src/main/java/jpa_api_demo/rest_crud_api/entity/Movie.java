@@ -21,7 +21,7 @@ public class Movie {
     @Column(name="composer")
     private String composer;
 
-    @Column(name="release")
+    @Column(name="year")
     private int year;
 
     public Movie(){
