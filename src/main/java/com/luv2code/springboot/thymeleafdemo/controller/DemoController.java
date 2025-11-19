@@ -12,7 +12,7 @@ public class DemoController {
     public String sayHello(Model theModel){
 
         theModel.addAttribute("theDate", java.time.LocalDateTime.now());
-
+        System.out.println("rebaseTest!!");
         return "helloworld.backup";
 
     }
